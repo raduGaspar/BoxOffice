@@ -1,0 +1,23 @@
+{
+  "name": "boxoffice",
+  "version": "1.0.0",
+  "description": "Your tv-show tracking solution",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "standard --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^4.4.0",
+    "next": "^3.2.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}

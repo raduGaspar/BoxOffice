@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": true,
+    "statuses": {
+      ".write": false
+    },
+    "users": {
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        "shows": {
+          ".indexOn": ["name", "tags"]
+        },
+        "settings": {}
+      }
+    }
+  }
+}
