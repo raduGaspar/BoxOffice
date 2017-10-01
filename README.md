@@ -17,5 +17,5 @@ npm run dev
 ```
 ___
 ### This project is under development
-Checkout the ![desktop](https://github.com/raduGaspar/nwjs-show-tracker) version until the first web release
+Checkout the ![desktop](https://github.com/raduGaspar/nwjs-show-tracker/releases) version until the first web release
 ___
