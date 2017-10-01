@@ -6,10 +6,10 @@ export default (props) => (
         src={props.user.photoURL}
         alt='user-image'
       />
+      <p className='name'>
+        { props.user.displayName }
+      </p>
     </div>
-    <p className='name'>
-      { props.user.displayName }
-    </p>
 
     { /* language=CSS */ }
     <style jsx>{`
@@ -60,12 +60,15 @@ export default (props) => (
       }
 
       .user .name {
+        position: absolute;
         color: #fff;
-        margin: 20px 0;
-        width: 100%;
+        width: 80%;
         text-align: center;
-        font-size: 16px;
         font-weight: bold;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0px 4px #000;
       }
     `}</style>
   </div>
