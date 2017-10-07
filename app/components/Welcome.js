@@ -1,5 +1,8 @@
+import React from 'react'
+import { sizes } from '../constants'
+
 export default (props) => (
-  <div className='user'>
+  <div className='user fade-in'>
     <div className='image'>
       <span />
       <img
@@ -17,9 +20,6 @@ export default (props) => (
         position: relative;
         height: 150px;
         width: 150px;
-        /*border-radius: 50%;*/
-        /*border: 2px solid #fff;*/
-        /*box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);*/
       }
       .image:before,
       .image:after, span {
@@ -30,7 +30,7 @@ export default (props) => (
         width: 100%;
         top: 0%;
         left: 0%;
-        border-radius: 50%;
+        border-radius: ${sizes.borderRadius}px;
         box-shadow: 0 0 15px #287ec6;
         animation: glow-grow 2s ease-out infinite;
       }
@@ -43,7 +43,7 @@ export default (props) => (
       .image img {
         max-width: 100%;
         max-height: 100%;
-        border-radius: 50%;
+        border-radius: ${sizes.borderRadius}px;
       }
       @keyframes glow-grow {
         0% {

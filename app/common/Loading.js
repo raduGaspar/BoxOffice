@@ -1,4 +1,5 @@
 import React from 'react'
+import { sizes } from '../constants'
 
 const Loading = (props) => (
   <div className='spinner'>
@@ -18,7 +19,7 @@ const Loading = (props) => (
         height: 14px;
         background-color: #fff;
 
-        border-radius: 100%;
+        border-radius: ${sizes.borderRadius}px;
         display: inline-block;
         -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
         animation: sk-bouncedelay 1.4s infinite ease-in-out both;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default (props) => (
-  <div className='text-center'>
+  <div className='text-center fade-in'>
     <p className='app-title'>
       <img className='logo' src='/static/assets/favicon.png' alt='logo' />
       BoxOffice
