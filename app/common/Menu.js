@@ -8,8 +8,8 @@ const Menu = (props) => (
         key={`menu-item-${idx}`}
       >
         <a
-          href="#"
-          onClick={item.action ? item.action(item, idx) : props.onClick(item, idx) }
+          href='#'
+          onClick={item.action ? item.action(item, idx) : props.onClick(item, idx)}
         >
           { item.label }
         </a>

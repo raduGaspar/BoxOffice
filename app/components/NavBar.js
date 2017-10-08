@@ -1,7 +1,7 @@
 import { colors, sizes, effects } from '../constants'
 
 export default (props) => (
-  <div className="navbar">
+  <div className='navbar'>
     main nav bar actions and search
     <button onClick={() => props.logout()}>Sign Out</button>
     <style jsx>{`

@@ -1,8 +1,8 @@
 import { colors, sizes, effects } from '../constants'
 
 const User = (props) => (
-  <div className="images">
-    <div className="frame">
+  <div className='images'>
+    <div className='frame'>
       <img
         height='100%'
         src={props.user.photoURL}
@@ -11,10 +11,10 @@ const User = (props) => (
       <img
         height='100%'
         src='/static/assets/logo.svg'
-        alt="logo"
+        alt='logo'
       />
     </div>
-    <p className="name">
+    <p className='name'>
       {props.user.displayName}
     </p>
     <style jsx>{`

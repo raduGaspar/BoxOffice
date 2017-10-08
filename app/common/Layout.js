@@ -5,7 +5,7 @@ import Firebase from './Firebase'
 import Menu from './Menu'
 import User from './User'
 import NavBar from '../components/NavBar'
-import { colors, sizes, effects } from '../constants'
+import { colors, sizes } from '../constants'
 
 const redirectToLanding = () => {
   Router.router.replace('/index', '/')
@@ -25,13 +25,13 @@ export default (props) => (
   <Firebase>
     { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
       <div className='wrapper app fade-in'>
-        <div className="sidebar">
+        <div className='sidebar'>
           <User user={fb.user} />
           <Menu items={menuData} />
         </div>
-        <div className="main">
+        <div className='main'>
           <NavBar logout={logout} />
-          <div className="content">
+          <div className='content'>
             { props.children }
           </div>
         </div>

@@ -193,12 +193,12 @@ export default class MyDocument extends Document {
           `}</style>
         </Head>
         <body>
-        <div className='wrapper'>
-          <div className='page'>
-            <Main />
+          <div className='wrapper'>
+            <div className='page'>
+              <Main />
+            </div>
           </div>
-        </div>
-        <NextScript />
+          <NextScript />
         </body>
       </html>
     )
