@@ -3,7 +3,7 @@ import Router from 'next/router'
 import Loading from './Loading'
 import Firebase from './Firebase'
 
-const handleLoginRedirect = () => {
+const redirectToLanding = () => {
   Router.router.replace('/index', '/')
   return null
 }
@@ -15,6 +15,6 @@ export default (props) => (
         <button onClick={() => logout()}>Sign Out</button>
         { props.children }
       </div>
-    ) : handleLoginRedirect() }
+    ) : redirectToLanding() }
   </Firebase>
 )
