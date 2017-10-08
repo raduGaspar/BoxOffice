@@ -7,6 +7,7 @@ const redirectToShows = () => {
 }
 
 export default (props) => {
+  // redirect to the shows page after 3 seconds
   setTimeout(redirectToShows, 3000)
 
   return (

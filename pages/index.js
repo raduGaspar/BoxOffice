@@ -20,11 +20,9 @@ import Welcome from '../app/components/Welcome'
 
 export default () => (
   <Firebase>
-    { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
-      <div>
-        <Welcome user={fb.user} />
-        <button onClick={() => logout()}>Sign Out</button>
-      </div>
-    ) : <Login login={login} error={fb.error} /> }
+    { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user
+      ? <Welcome user={fb.user} />
+      : <Login login={login} error={fb.error} />
+    }
   </Firebase>
 )
