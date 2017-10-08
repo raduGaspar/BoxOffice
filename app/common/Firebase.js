@@ -43,7 +43,9 @@ class Firebase extends Component {
   }
 
   componentDidMount () {
-    firebase.initializeApp(config.firebase)
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config.firebase)
+    }
     firebase.auth().onAuthStateChanged(this.updateUser)
   }
 

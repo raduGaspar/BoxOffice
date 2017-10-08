@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import flush from 'styled-jsx/server'
 
+import { colors } from '../app/constants'
+
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const { html, head, errorHtml, chunks } = renderPage()
@@ -32,7 +34,7 @@ export default class MyDocument extends Document {
             html, body {
               width: 100%;
               height: 100%;
-              background: #15151f;
+              background: ${colors.background};
             }
 
             /* utils */
@@ -86,7 +88,6 @@ export default class MyDocument extends Document {
             }
 
             .btn-login.google {
-              /*font-family: "Roboto", Roboto, arial, sans-serif;*/
               background: #DD4B39;
             }
             .btn-login.google:before {
@@ -135,11 +136,68 @@ export default class MyDocument extends Document {
               from { opacity: 0; }
               to   { opacity: 1; }
             }
+
+            .fade-out {
+              -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+              -moz-animation: fadeout 2s; /* Firefox < 16 */
+              -ms-animation: fadeout 2s; /* Internet Explorer */
+              -o-animation: fadeout 2s; /* Opera < 12.1 */
+              animation: fadeout 2s;
+            }
+
+            @keyframes fadeout {
+              from { opacity: 1; }
+              to   { opacity: 0; }
+            }
+
+            /* Firefox < 16 */
+            @-moz-keyframes fadeout {
+              from { opacity: 1; }
+              to   { opacity: 0; }
+            }
+
+            /* Safari, Chrome and Opera > 12.1 */
+            @-webkit-keyframes fadeout {
+              from { opacity: 1; }
+              to   { opacity: 0; }
+            }
+
+            /* Internet Explorer */
+            @-ms-keyframes fadeout {
+              from { opacity: 1; }
+              to   { opacity: 0; }
+            }
+
+            /* Opera < 12.1 */
+            @-o-keyframes fadeout {
+              from { opacity: 1; }
+              to   { opacity: 0; }
+            }
           `}</style>
         </Head>
         <body>
-          <Main />
-          <NextScript />
+        <div className='wrapper'>
+          <div className='page'>
+            <Main />
+          </div>
+        </div>
+        <NextScript />
+        <style jsx>{`
+          .wrapper {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+          .page {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+        `}</style>
         </body>
       </html>
     )

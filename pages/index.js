@@ -19,33 +19,12 @@ import Welcome from '../app/components/Welcome'
 // })
 
 export default () => (
-  <div className='wrapper'>
-    <div className='status'>
-      <Firebase>
-        { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
-          <div>
-            <Welcome user={fb.user} />
-            <button onClick={() => logout()}>Sign Out</button>
-          </div>
-        ) : <Login login={login} error={fb.error} /> }
-      </Firebase>
-    </div>
-
-    <style jsx>{`
-      .wrapper {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-      }
-      .status {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-    `}</style>
-  </div>
+  <Firebase>
+    { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
+      <div>
+        <Welcome user={fb.user} />
+        <button onClick={() => logout()}>Sign Out</button>
+      </div>
+    ) : <Login login={login} error={fb.error} /> }
+  </Firebase>
 )
