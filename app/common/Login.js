@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { sizes } from '../constants'
+
 export default (props) => (
   <div className='text-center fade-in'>
     <p className='app-title'>
-      <img className='logo' src='/static/assets/favicon.png' alt='logo' />
+      <img className='logo' height={60} src='/static/assets/logo.svg' alt='logo' />
       BoxOffice
     </p>
     <button
@@ -22,14 +24,14 @@ export default (props) => (
       .app-title {
         color: #fff;
         display: flex;
-        font-size: 100px;
+        font-size: 80px;
         font-weight: bold;
         margin: 10px 0;
         align-items: center;
         justify-content: center;
       }
       .app-title .logo {
-        margin-right: 2.5rem;
+        border-radius: ${sizes.borderRadius}px;
       }
     `}</style>
   </div>

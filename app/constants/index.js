@@ -3,6 +3,7 @@ const colors = {
   gray: {
     light: '#f7f8fc',
     medium: '#ecf0f1',
+    medDark: '#93a5a5',
     dark: '#34495e',
     darker: '#2d3e50'
   },
@@ -12,10 +13,16 @@ const colors = {
 }
 
 const sizes = {
-  borderRadius: 4
+  borderRadius: 4,
+  padding: 30
+}
+
+const effects = {
+  shadow: '0 1px 4px rgba(0,0,0,0.4)'
 }
 
 export {
   colors,
-  sizes
+  sizes,
+  effects
 }

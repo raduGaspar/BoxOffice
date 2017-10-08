@@ -24,11 +24,14 @@ export default class MyDocument extends Document {
 
           { /* language=CSS */ }
           <style jsx global>{`
+            /* font */
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
             /* reset */
             * {
               margin: 0;
               padding: 0;
-              font-family: Arial;
+              font-family: 'Montserrat', sans-serif;
               font-size: 14px;
             }
             html, body {
@@ -38,6 +41,20 @@ export default class MyDocument extends Document {
             }
 
             /* utils */
+            .wrapper {
+              position: fixed;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+            }
+            .page {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
             .text-center {
               text-align: center;
             }
@@ -182,22 +199,6 @@ export default class MyDocument extends Document {
           </div>
         </div>
         <NextScript />
-        <style jsx>{`
-          .wrapper {
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-          }
-          .page {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-          }
-        `}</style>
         </body>
       </html>
     )

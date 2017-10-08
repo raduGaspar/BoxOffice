@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" app-context="doc-2d" x="0px"
+     y="0px" width="128" height="128" style="background-color:rgba(128,124,124,0)" jvs-fullPath="gdrive/BoxOffice.svg">
+    <title/>
+    <desc/>
+    <defs/>
+    <g id="jvs-guides" transform="matrix(1 0 0 1 0 0)"/>
+    <g id="jvs-content" enable-background="new">
+        <g transform="matrix(1,0,0,1,0,0)" name="Layer" jvs-layer-color="#fb0094" class="jvs-layer selected">
+            <g transform="matrix(1,0,0,1,143.08856201171875,74.43458557128906)" class="">
+                <rect transform="matrix(0.707107 0.707107 -0.707107 0.707107 112.13 -36.8469)" width="64" height="64"
+                      fill="rgb(252,174,22)" stroke="#000000" stroke-width="0" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="1" y="76.5067" rx="0" x="-103.769" selected="true"
+                      fill-opacity="1"/>
+                <rect transform="matrix(0.707107 0.707107 -0.707107 0.707107 146.303 11.3364)" width="135.357"
+                      height="43.7286" fill="rgb(45,112,204)" stroke="#000000" stroke-width="0" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="1" y="52.2737" rx="0" x="-219.465"
+                      style="mix-blend-mode: darken;" selected="true" fill-opacity="1"/>
+                <rect transform="matrix(0.707107 -0.707107 0.707107 0.707107 42.6372 -137.611)" width="135.655"
+                      height="43.0522" fill="rgb(231,76,58)" stroke="#000000" stroke-width="0" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="1" y="51.4652" rx="0" x="-219.947"
+                      style="mix-blend-mode: multiply;" selected="true" fill-opacity="1"/>
+            </g>
+            <rect class="stripes" transform="matrix(-0.707107 -0.707107 0.707107 -0.707107 -172.046 39.9644)" width="146.796"
+                  height="48.492" fill="rgb(255,255,255)" stroke="#000000" stroke-width="0" stroke-linecap="butt"
+                  stroke-linejoin="miter" opacity="0.5" y="57.9676" rx="0" x="-238.012" style="mix-blend-mode: normal;"
+                  fill-opacity="1"/>
+            <rect class="stripes" transform="matrix(-0.707107 0.707107 -0.707107 -0.707107 -52.8061 200.344)" width="140.104"
+                  height="48.5127" fill="rgb(255,255,255)" stroke="#000000" stroke-width="0" stroke-linecap="butt"
+                  stroke-linejoin="miter" opacity="0.5" y="57.9928" rx="0" x="-227.162" style="mix-blend-mode: normal;"
+                  fill-opacity="1"/>
+        </g>
+    </g>
+</svg>
