@@ -19,14 +19,12 @@ export default class MyDocument extends Document {
           <meta name='viewport' content='width=device-width,initial-scale=1' />
           <title>BoxOffice - Your tv-show tracking solution</title>
           <link rel='shortcut icon' type='image/x-icon' href='/static/assets/favicon.png' />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,600' />
 
           <script src='https://www.gstatic.com/firebasejs/4.4.0/firebase.js' />
 
           { /* language=CSS */ }
-          <style jsx global>{`
-            /* font */
-            @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
-
+          <style dangerouslySetInnerHTML={{__html: `
             /* reset */
             * {
               margin: 0;
@@ -190,7 +188,7 @@ export default class MyDocument extends Document {
               from { opacity: 1; }
               to   { opacity: 0; }
             }
-          `}</style>
+          `}} />
         </Head>
         <body>
           <div className='wrapper'>
