@@ -20,7 +20,7 @@ const User = (props) => (
     <style jsx>{`
       .images {
         position: relative;
-        height: 100px;
+        height: ${sizes.topBarHeight}px;
         display: flex;
         align-items: center;
         justify-content: center;

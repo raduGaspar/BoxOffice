@@ -9,7 +9,7 @@ export default (props) => (
         position: relative;
         padding: 0 ${sizes.padding}px;
         border-bottom: 1px solid ${colors.gray.medium}
-        height: 99px;
+        height: ${sizes.topBarHeight}px;
         display: flex;
         align-items: center;
         justify-content: space-between;

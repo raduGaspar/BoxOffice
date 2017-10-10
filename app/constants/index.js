@@ -14,7 +14,8 @@ const colors = {
 
 const sizes = {
   borderRadius: 4,
-  padding: 30
+  padding: 30,
+  topBarHeight: 100
 }
 
 const effects = {
