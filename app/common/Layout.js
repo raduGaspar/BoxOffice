@@ -40,7 +40,7 @@ export default (props) => (
             display: flex;
           }
           .app .sidebar {
-            max-width: 200px;
+            max-width: 250px;
             flex: 1;
             background: ${colors.gray.dark}
           }
