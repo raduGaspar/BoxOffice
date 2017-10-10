@@ -1,4 +1,4 @@
-import { colors, sizes, effects } from '../constants'
+import { colors, sizes } from '../constants'
 
 const User = (props) => (
   <div className='images'>
@@ -25,7 +25,6 @@ const User = (props) => (
         align-items: center;
         justify-content: center;
         background ${colors.green};
-        box-shadow: ${effects.shadow};
       }
       .images .frame {
         position: relative;
@@ -33,7 +32,6 @@ const User = (props) => (
         height: 48px;
         border-radius: ${sizes.borderRadius}px;
         overflow: hidden;
-        box-shadow: ${effects.shadow};
       }
       .images img {
         position: absolute;

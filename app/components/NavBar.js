@@ -1,4 +1,4 @@
-import { colors, sizes, effects } from '../constants'
+import { colors, sizes } from '../constants'
 
 export default (props) => (
   <div className='navbar'>
@@ -12,7 +12,6 @@ export default (props) => (
         height: 99px;
         display: flex;
         align-items: center;
-        box-shadow: ${effects.shadow};
         justify-content: space-between;
       }
     `}</style>

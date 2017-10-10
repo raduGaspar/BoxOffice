@@ -2,7 +2,7 @@ const colors = {
   background: '#15151f',
   gray: {
     light: '#f7f8fc',
-    medium: '#ecf0f1',
+    medium: '#e5e5e5',
     medDark: '#93a5a5',
     dark: '#34495e',
     darker: '#2d3e50'
