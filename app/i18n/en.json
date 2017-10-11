@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "episodes": "Episodes",
+    "shows": "Shows",
+    "settings": "Settings"
+  },
+  "shows": {
+    "panels": {
+      "list": "TV Show Tracker"
+    },
+    "titles": {
+      "addShow": "Add show details"
+    },
+    "buttons": {
+      "add": "Add Show",
+      "save": "Save Show",
+      "edit": "Save Changes",
+      "cancel": "cancel"
+    },
+    "warnings": {
+      "noShows": "No shows available. Type a show name into the input above or click on the <code>${this.shows.buttons.add}</code> button bellow to get started",
+      "noResults": "No results available"
+    },
+    "labels": {
+      "increaseSeason": "Right click to increase season number",
+      "disableSeasons": "disable seasons"
+    },
+    "placeholders": {
+      "addShow": "Type show name and press <Enter>",
+      "filterShow": "Filter shows",
+      "filterResults": "Filter results",
+      "addTags": "Add show tags: comedy, adventure, etc."
+    },
+    "descriptors": {
+      "showName": "Show Name",
+      "airDay": "Air Day",
+      "season": "Season",
+      "episode": "Episode",
+      "tags": "Tags"
+    }
+  },
+  "settings": {
+    "panels": {
+      "general": "General",
+      "trackers": "Torrent Trackers",
+      "restore": "Restore Defaults"
+    },
+    "titles": {
+      "trackerList": "Pick a default tracker to use",
+      "trackerAdd": "Add a tracker to the list"
+    },
+    "buttons": {
+      "export": "Export Data",
+      "import": "Import Data",
+      "restore": "Restore Defaults"
+    },
+    "warnings": {
+      "general": "Exporting will save all <code>${this.menu.settings}</code> and <code>${this.menu.shows}</code>. On import all current <code>${this.menu.settings}</code> and <code>${this.menu.shows}</code> will be deleted!",
+      "restore": "Restoring the defaults will remove all current trackers and custom settings! Your <code>${this.menu.shows}</code> won't be affected."
+    },
+    "labels": {
+      "showTags": "Display TV-Show Tags",
+      "trackerAdd": "press <code>${key}</code> to save"
+    },
+    "placeholders": {
+      "trackerAdd": "Add another tracker url"
+    },
+    "descriptors": {
+      "pickLanguage": "Pick Language"
+    }
+  },
+  "alerts": {
+    "warning": "Warning!",
+    "info": "Info!",
+    "dataExport": "Data exported successfully to ${file}",
+    "dbReject": "One or more parameters are missing"
+  },
+  "labels": {
+    "search": "Search ${url}",
+    "searching": "Searching:",
+    "noResults": ":( Nothing found"
+  },
+  "shortcuts": {
+    "addShow": "${this.shows.buttons.add}"
+  },
+  "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+}
