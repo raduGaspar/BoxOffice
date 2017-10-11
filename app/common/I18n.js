@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import fetch from 'isomorphic-fetch'
 
 class I18n extends Component {
   constructor (props) {
@@ -21,6 +22,13 @@ class I18n extends Component {
     const settings = snap.val()
     if (settings) {
       const { language } = settings
+
+      fetch(`/static/i18n/${language}.json`, {
+        method: 'GET'
+      })
+        .then((res) => res.json())
+        .then((data) => console.log('translations', data))
+
       console.log('we have settings and the language is', language)
     } else {
       console.log('no settings available: setting default')
