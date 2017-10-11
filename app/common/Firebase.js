@@ -3,20 +3,29 @@ import firebase from 'firebase'
 import config from '../../config'
 
 class Firebase extends Component {
-  state = {
-    isLoading: true,
-    error: null,
-    user: null
+  constructor () {
+    super()
+
+    this.state = {
+      isLoading: true,
+      error: null,
+      user: null
+    }
+
+    this.handleError = this.handleError.bind(this)
+    this.handleLogin = this.handleLogin.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
+    this.updateUser = this.updateUser.bind(this)
   }
 
-  handleError = (err) => {
+  handleError (err) {
     this.setState({
       isLoading: false,
       error: err.message
     })
   }
 
-  handleLogin = () => {
+  handleLogin () {
     this.setState({ isLoading: true })
     firebase
       .auth()
@@ -24,12 +33,12 @@ class Firebase extends Component {
       .catch(this.handleError)
   }
 
-  handleLogout = () => {
+  handleLogout () {
     this.setState({ isLoading: true })
     firebase.auth().signOut()
   }
 
-  updateUser = (user) => {
+  updateUser (user) {
     const newState = {
       isLoading: false,
       error: null,
@@ -54,7 +63,7 @@ class Firebase extends Component {
       <div>
         {this.props.children(this.state, {
           login: this.handleLogin,
-          logout: this.handleLogout,
+          logout: this.handleLogout
         })}
       </div>
     )
