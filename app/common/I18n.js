@@ -27,7 +27,12 @@ class I18n extends Component {
         method: 'GET'
       })
         .then((res) => res.json())
-        .then((data) => console.log('translations', data))
+        .then((data) => {
+          this.setState({
+            language,
+            data
+          })
+        })
 
       console.log('we have settings and the language is', language)
     } else {
@@ -39,11 +44,12 @@ class I18n extends Component {
   }
 
   render () {
-    return (
+    const { data } = this.state
+    return data ? (
       <div>
         {this.props.children(this.state)}
       </div>
-    )
+    ) : null
   }
 }
 

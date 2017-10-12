@@ -5,6 +5,32 @@
     "settings": "Setari"
   },
   "shows": {
+    "tags": [
+      {
+        "label": "Toate",
+        "value": "all"
+      },
+      {
+        "label": "Vizionez",
+        "value": "watching"
+      },
+      {
+        "label": "Vreau sa vizionez",
+        "value": "ptw"
+      },
+      {
+        "label": "In asteptare",
+        "value": "onhold"
+      },
+      {
+        "label": "Renuntat",
+        "value": "dropped"
+      },
+      {
+        "label": "Terminat",
+        "value": "complete"
+      }
+    ],
     "panels": {
       "list": "Tracker Seriale"
     },

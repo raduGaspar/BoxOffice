@@ -13,24 +13,15 @@ const redirectToLanding = () => {
   return null
 }
 
-const menuData = [
-  { label: 'All', value: 'all' },
-  { label: 'Watching', value: 'watching' },
-  { label: 'Plan to Watch', value: 'ptw', selected: true },
-  { label: 'On-Hold', value: 'onhold' },
-  { label: 'Dropped', value: 'dropped' },
-  { label: 'Complete', value: 'complete' }
-]
-
 export default (props) => (
   <Firebase>
     { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
       <I18n fb={fb}>
-        { () => (
+        { (i18n) => (
           <div className='wrapper app fade-in'>
             <div className='sidebar'>
               <User user={fb.user} />
-              <Menu items={menuData} />
+              <Menu items={i18n.data.shows.tags} />
             </div>
             <div className='main'>
               <NavBar logout={logout} />

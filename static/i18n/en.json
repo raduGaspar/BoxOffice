@@ -5,6 +5,32 @@
     "settings": "Settings"
   },
   "shows": {
+    "tags": [
+      {
+        "label": "All",
+        "value": "all"
+      },
+      {
+        "label": "Watching",
+        "value": "watching"
+      },
+      {
+        "label": "Plan to Watch",
+        "value": "ptw"
+      },
+      {
+        "label": "On-Hold",
+        "value": "onhold"
+      },
+      {
+        "label": "Dropped",
+        "value": "dropped"
+      },
+      {
+        "label": "Complete",
+        "value": "complete"
+      }
+    ],
     "panels": {
       "list": "TV Show Tracker"
     },
