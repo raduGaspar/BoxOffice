@@ -2,7 +2,7 @@
   "menu": {
     "episodes": "Episoade",
     "shows": "Seriale",
-    "settings": "Setari"
+    "settings": "Setări"
   },
   "shows": {
     "tags": [
@@ -15,15 +15,15 @@
         "value": "watching"
       },
       {
-        "label": "Vreau sa vizionez",
+        "label": "Vreau să văd",
         "value": "ptw"
       },
       {
-        "label": "In asteptare",
+        "label": "În așteptare",
         "value": "onhold"
       },
       {
-        "label": "Renuntat",
+        "label": "Renunțat",
         "value": "dropped"
       },
       {
@@ -35,27 +35,27 @@
       "list": "Tracker Seriale"
     },
     "titles": {
-      "addShow": "Adauga detalii serial"
+      "addShow": "Adaugă detalii serial"
     },
     "buttons": {
-      "add": "Adauga Serial",
-      "save": "Salveaza Serial",
-      "edit": "Salveaza Modificarile",
-      "cancel": "Anuleaza"
+      "add": "Adaugă Serial",
+      "save": "Salvează Serial",
+      "edit": "Salvează Modificările",
+      "cancel": "Anulează"
     },
     "warnings": {
-      "noShows": "Nu exista seriale. Tastati numele unui serial in casuta de mai sus sau click pe butonul <code>${this.shows.buttons.add}</code> de mai jos pentru a incepe",
-      "noResults": "Nu exista rezultate"
+      "noShows": "Nu există seriale. Tastați numele unui serial în căsuța de mai sus sau click pe butonul <code>${this.shows.buttons.add}</code> de mai jos pentru a începe",
+      "noResults": "Nu există rezultate"
     },
     "labels": {
-      "increaseSeason": "Click dreapta pentru a mari numarul sezonului",
+      "increaseSeason": "Click dreapta pentru a mări numărul sezonului",
       "disableSeasons": "dezactivare sezoane"
     },
     "placeholders": {
-      "addShow": "Tasteaza nume serial si apasa <Enter>",
-      "filterShow": "Filtreaza seriale",
-      "filterResults": "Filtreaza rezultatele",
-      "addTags": "Adauga taguri pentru serial: comedie, adventura, etc."
+      "addShow": "Tastează nume serial și apăsa <Enter>",
+      "filterShow": "Filtrează seriale",
+      "filterResults": "Filtrează rezultatele",
+      "addTags": "Adaugă taguri pentru serial: comedie, adventura, etc."
     },
     "descriptors": {
       "showName": "Nume",
@@ -69,45 +69,53 @@
     "panels": {
       "general": "Generale",
       "trackers": "Trackere Torrent",
-      "restore": "Revenire la setarile implicite"
+      "restore": "Revenire la setările implicite"
     },
     "titles": {
       "trackerList": "Alege un tracker implicit",
-      "trackerAdd": "Adauga un tracker nou"
+      "trackerAdd": "Adaugă un tracker nou"
     },
     "buttons": {
-      "export": "Exporta Datele",
-      "import": "Importa Datele",
+      "export": "Exportă Datele",
+      "import": "Importă Datele",
       "restore": "Resetare"
     },
     "warnings": {
-      "general": "Exportarea va salva tot din <code>${this.menu.settings}</code> si <code>${this.menu.shows}</code>. La import tot ce se afla in <code>${this.menu.settings}</code> si <code>${this.menu.shows}</code> va fi sters!",
-      "restore": "Restaurarea la setarile implicite va sterge toate trackerele si setarile personale! Datele despre <code>${this.menu.shows}</code> nu vor fi afectate."
+      "general": "Exportarea va salva tot din <code>${this.menu.settings}</code> și <code>${this.menu.shows}</code>. La import tot ce se află în <code>${this.menu.settings}</code> și <code>${this.menu.shows}</code> va fi șters!",
+      "restore": "Restaurarea la setările implicite va șterge toate trackerele și setările personale! Datele despre <code>${this.menu.shows}</code> nu vor fi afectate."
     },
     "labels": {
-      "showTags": "Afiseaza Tagurile Serialelor",
-      "trackerAdd": "apasa <code>${key}</code> pentru a salva"
+      "showTags": "Afișează Tagurile Serialelor",
+      "trackerAdd": "apăsa <code>${key}</code> pentru a salva"
     },
     "placeholders": {
-      "trackerAdd": "Adauga un tracker url"
+      "trackerAdd": "Adaugă un tracker url"
     },
     "descriptors": {
-      "pickLanguage": "Alege Limba"
+      "pickLanguage": "Alege Limbă"
     }
   },
   "alerts": {
-    "warning": "Atentie!",
+    "warning": "Atenție!",
     "info": "Informare!",
-    "dataExport": "Fisierul a fost salvat cu succes in ${file}",
-    "dbReject": "Lipseste unul sau mai multi parametri"
+    "dataExport": "Fișierul a fost salvat cu succes în ${file}",
+    "dbReject": "Lipsește unul sau mai mulți parametri"
   },
   "labels": {
-    "search": "Cauta ${url}",
-    "searching": "Cautare:",
-    "noResults": ":( Nu exista rezultate"
+    "search": "Caută ${url}",
+    "searching": "Căutare:",
+    "noResults": ":( Nu există rezultate"
   },
   "shortcuts": {
     "addShow": "${this.shows.buttons.add}"
   },
-  "weekdays": ["Duminica", "Luni", "Marti", "Miercuri", "Joi", "Vineri", "Sambata"]
+  "weekdays": [
+    "Duminică",
+    "Luni",
+    "Marți",
+    "Miercuri",
+    "Joi",
+    "Vineri",
+    "Sâmbătă"
+  ]
 }
