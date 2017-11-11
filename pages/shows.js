@@ -4,8 +4,12 @@ import ShowsContainer from '../app/containers/ShowsContainer'
 
 export default () => (
   <Layout>
-    {(fb, i18n) => (
-      <ShowsContainer fb={fb} i18n={i18n} />
+    {(fb, i18n, filters) => (
+      <ShowsContainer
+        fb={fb}
+        i18n={i18n}
+        filters={filters}
+      />
     )}
   </Layout>
 )

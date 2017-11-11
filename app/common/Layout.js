@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Router from 'next/router'
 import Loading from './Loading'
 import Firebase from './Firebase'
@@ -13,23 +13,45 @@ const redirectToLanding = () => {
   return null
 }
 
-export default (props) => (
-  <Firebase>
-    { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
-      <I18n fb={fb}>
-        { (i18n) => (
-          <div className='wrapper app fade-in'>
-            <div className='sidebar'>
-              <User user={fb.user} />
-              <Menu items={i18n.data.shows.tags} />
-            </div>
-            <div className='main'>
-              <NavBar logout={logout} />
-              <div className='content'>
-                { props.children(fb, i18n) }
-              </div>
-            </div>
-            <style jsx>{`
+export default class Layout extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      filters: null
+    }
+
+    this.onFiltersChange = this.onFiltersChange.bind(this)
+  }
+
+  onFiltersChange (filters) {
+    this.setState({ filters })
+  }
+
+  render () {
+    const { props, onFiltersChange } = this
+    const { filters } = this.state
+
+    return (
+      <Firebase>
+        { (fb, { login, logout }) => fb.isLoading ? <Loading /> : fb.user ? (
+          <I18n fb={fb}>
+            { (i18n) => (
+              <div className='wrapper app fade-in'>
+                <div className='sidebar'>
+                  <User user={fb.user} />
+                  <Menu items={i18n.data.shows.tags} />
+                </div>
+                <div className='main'>
+                  <NavBar
+                    logout={logout}
+                    onChange={onFiltersChange}
+                  />
+                  <div className='content'>
+                    { props.children(fb, i18n, filters) }
+                  </div>
+                </div>
+                <style jsx>{`
               .app {
                 display: flex;
               }
@@ -52,9 +74,11 @@ export default (props) => (
                 padding: ${sizes.padding}px;
               }
             `}</style>
-          </div>
-        ) }
-      </I18n>
-    ) : redirectToLanding() }
-  </Firebase>
-)
+              </div>
+            ) }
+          </I18n>
+        ) : redirectToLanding() }
+      </Firebase>
+    )
+  }
+}
