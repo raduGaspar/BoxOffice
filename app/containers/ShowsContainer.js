@@ -32,6 +32,8 @@ class ShowsContainer extends Component {
 
   onShows (snap) {
     const shows = snap.val()
+
+    // watching
     this.setState({
       shows
     })
@@ -46,13 +48,15 @@ class ShowsContainer extends Component {
   }
 
   getShowsList (shows) {
+    const { i18n } = this.props
     return shows ? Object.keys(shows).map((showId, idx) => (
       <div
         className={`show ${idx % 2 === 0 ? 'even' : 'odd'}`}
         key={showId}
       >
         { this.getEpisode(shows[showId]) }&nbsp;
-        { shows[showId].name }
+        { shows[showId].name }&nbsp;
+        { i18n.data.weekdays[shows[showId].airsOn] }
         <style jsx>{`
           .show {
             padding: 5px;

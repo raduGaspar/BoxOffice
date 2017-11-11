@@ -38,7 +38,8 @@ class I18n extends Component {
     } else {
       console.log('no settings available: setting default')
       this.settingsRef.update({
-        language: 'en'
+        language: 'en',
+        showTags: false
       })
     }
   }
