@@ -26,7 +26,7 @@ export default (props) => (
             <div className='main'>
               <NavBar logout={logout} />
               <div className='content'>
-                { props.children }
+                { props.children(fb, i18n) }
               </div>
             </div>
             <style jsx>{`
@@ -39,10 +39,16 @@ export default (props) => (
                 background: ${colors.gray.dark}
               }
               .app .main {
+                display: flex;
+                flex-direction: column;
                 flex: 1;
                 background: #fff;
               }
               .app .content {
+                flex: 1;
+                height: 100%;
+                min-height: 0;
+                overflow: auto;
                 padding: ${sizes.padding}px;
               }
             `}</style>

@@ -4,6 +4,8 @@ import SettingsContainer from '../app/containers/SettingsContainer'
 
 export default () => (
   <Layout>
-    <SettingsContainer />
+    {(fb, i18n) => (
+      <SettingsContainer fb={fb} i18n={i18n} />
+    )}
   </Layout>
 )
