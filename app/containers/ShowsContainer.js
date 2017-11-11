@@ -54,15 +54,39 @@ class ShowsContainer extends Component {
         className={`show ${idx % 2 === 0 ? 'even' : 'odd'}`}
         key={showId}
       >
-        { this.getEpisode(shows[showId]) }&nbsp;
-        { shows[showId].name }&nbsp;
-        { i18n.data.weekdays[shows[showId].airsOn] }
+        <div className="description">
+          <h3>{ shows[showId].name }</h3>
+          <p>{ i18n.data.weekdays[shows[showId].airsOn] }</p>
+          <p>Watch next: { this.getEpisode(shows[showId]) }</p>
+        </div>
+        <div className="actions">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+        </div>
         <style jsx>{`
           .show {
             padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
           }
           .show.odd {
             background: #ededed;
+          }
+
+          button {
+            display: inline-block;
+            outline: 0 none;
+            width: 30px;
+            height: 30px;
+            border: 0 none;
+            background: #ccc;
+          }
+          button:hover {
+            background: #dedede;
           }
         `}</style>
       </div>
