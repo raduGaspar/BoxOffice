@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { increaseEpisode, decreaseEpisode, formatEpisode } from '../utils'
 
 class ShowsContainer extends Component {
   constructor (props) {
@@ -12,11 +13,7 @@ class ShowsContainer extends Component {
     this.showsRef = db.ref(`users/${user.uid}/shows`)
     this.fetchData = this.fetchData.bind(this)
     this.onShows = this.onShows.bind(this)
-    this.getEpisode = this.getEpisode.bind(this)
     this.getShowsList = this.getShowsList.bind(this)
-
-    this.doNext = this.doNext.bind(this)
-    this.doPrev = this.doPrev.bind(this)
     this.updateEpisode = this.updateEpisode.bind(this)
   }
 
@@ -56,41 +53,9 @@ class ShowsContainer extends Component {
     })
   }
 
-  getEpisode (show) {
-    if (show.onlyEps) {
-      return show.episode < 10 ? `0${show.episode}`.slice(-2) : show.episode
-    } else {
-      return `s${`0${show.season}`.slice(-2)}e${`0${show.episode}`.slice(-2)}`
-    }
-  }
-
-  doNext (show, increaseSeason) {
-    const update = {}
-    if (increaseSeason && !show.onlyEps) {
-      update.season = show.season + 1
-      update.episode = 1
-    } else {
-      update.episode = show.episode + 1
-    }
-
-    return update
-  }
-
-  doPrev (show) {
-    const update = {}
-    if (show.episode > 1) {
-      update.episode = show.episode - 1
-    } else {
-      update.season = show.season - 1
-      update.episode = 1
-    }
-
-    return update
-  }
-
   updateEpisode (show, showId, isNext = true, increaseSeason = false) {
     const { db, user } = this.props.fb
-    const method = isNext ? this.doNext : this.doPrev
+    const method = isNext ? increaseEpisode : decreaseEpisode
     const update = method(show, increaseSeason)
 
     db.ref(`users/${user.uid}/shows/${showId}`)
@@ -107,10 +72,11 @@ class ShowsContainer extends Component {
         <div className='description'>
           <h3>{ shows[showId].name } {showId}</h3>
           <p>{ i18n.data.weekdays[shows[showId].airsOn] }</p>
-          <p>Watch next: { this.getEpisode(shows[showId]) }</p>
+          <p>Watch next: { formatEpisode(shows[showId]) }</p>
         </div>
         <div className='actions'>
           <button
+            title={i18n.data.shows.labels.increaseSeason}
             onClick={() => this.updateEpisode(shows[showId], showId)}
             onContextMenu={(e) => {
               e.preventDefault()
