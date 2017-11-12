@@ -70,7 +70,7 @@ class ShowsContainer extends Component {
         key={showId}
       >
         <div className='description'>
-          <h3>{ shows[showId].name } {showId}</h3>
+          <h3>{ shows[showId].name }</h3>
           <p>{ i18n.data.weekdays[shows[showId].airsOn] }</p>
           <p>Watch next: { formatEpisode(shows[showId]) }</p>
         </div>
@@ -86,9 +86,9 @@ class ShowsContainer extends Component {
             +
           </button>
           <button onClick={() => this.updateEpisode(shows[showId], showId, false)}>-</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
+          <button>...</button>
+          <button>e</button>
+          <button>x</button>
         </div>
         <style jsx>{`
           .show {
@@ -98,7 +98,7 @@ class ShowsContainer extends Component {
             align-items: center;
           }
           .show.odd {
-            background: #ededed;
+            background: #f0f0f0;
           }
 
           button {
